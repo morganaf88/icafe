@@ -1,0 +1,45 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <activeProfiles>
+        <activeProfile>github</activeProfile>
+        <activeProfile>dam-shared</activeProfile>
+    </activeProfiles>
+
+    <servers>
+        <server>
+            <id>dam-shared</id>
+            <username>aws</username>
+            <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>github</id>
+            <repositories>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/morganaf88/icafe</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+        <profile>
+            <id>dam-shared</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+            <repository>
+                <id>dam-shared</id>
+                <url>https://dam-754610378112.d.codeartifact.us-east-1.amazonaws.com/maven/shared/</url>
+            </repository>
+        </repositories>
+        </profile>
+    </profiles>
+</settings>

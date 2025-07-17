@@ -7,6 +7,20 @@
   <packaging>jar</packaging>
   <name>ICAFE Java image library</name>
   <url>https://github.com/dragon66/icafe</url>
+  
+  <distributionManagement>
+    <repository>
+      <id>DAMSharedCodeArtifact</id>
+      <name>DAM Shared CodeArtifact Repository</name>
+      <url>https://dam-754610378112.d.codeartifact.us-east-1.amazonaws.com/maven/shared/</url>
+    </repository>
+    <snapshotRepository>
+      <id>DAMSharedCodeArtifact</id>
+      <name>DAM Shared CodeArtifact Snapshot Repository</name>
+      <url>https://dam-754610378112.d.codeartifact.us-east-1.amazonaws.com/maven/shared/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
   <properties>
     <jdk.version>java18</jdk.version>
     <java.version>1.8</java.version>
