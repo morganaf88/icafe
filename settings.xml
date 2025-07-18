@@ -32,14 +32,14 @@
         <profile>
             <id>dam-shared</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+            <activeByDefault>true</activeByDefault>
             </activation>
             <repositories>
             <repository>
                 <id>dam-shared</id>
                 <url>https://dam-754610378112.d.codeartifact.us-east-1.amazonaws.com/maven/shared/</url>
             </repository>
-        </repositories>
+            </repositories>
         </profile>
     </profiles>
 </settings>
